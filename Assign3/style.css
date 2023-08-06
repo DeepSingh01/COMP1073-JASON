@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #3023AE, #C86DD7);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    padding-right: 50px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 243, 243, 0.2);
+    font-size: 16px;
+    color: #000000;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #FCA311;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E76F51;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li label {
+    flex: 1;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.delete-button {
+    color: #E63946;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+li.checked {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(100%);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+li.deleted {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(-100%);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
