@@ -30,7 +30,7 @@
       const header = document.querySelector("header");
       const section = document.querySelector("section");
       /* STEP 3: Store the URL of a JSON file in a variable */
-      const requestURL = "Lesson-10 Files Complete/Lesson-10 Files Complete/js/i-scream.json";
+      const requestURL = "https://dario-hesami.github.io/comp1073-JSON-3/js/i-scream.json";
       //
       /* STEP 4: Create a new XHR object */
       const request = new XMLHttpRequest();
@@ -76,7 +76,7 @@
           const p2 = document.createElement("p");
           const list = document.createElement("ul");
           // STEP 10e: Set the textContent property for each of the above elements (except the UL), based on the JSON content
-          img.setAttribute("src","Lesson-10 Files Complete/Lesson-10 Files Complete/images/" + topFlavors[i].image );
+          img.setAttribute("src","https://dario-hesami.github.io/COMP1073-JSON-3/images/" + topFlavors[i].image );
           img.setAttribute("alt", topFlavors[i].name);
           h2.textContent = topFlavors[i].name;
           p1.textContent = "Calories: " + topFlavors[i].calories;
