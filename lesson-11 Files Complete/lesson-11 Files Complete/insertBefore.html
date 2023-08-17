@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Element Object</h1>
+    <h2>The insertBefore() Method</h2>
+
+    <ul id="myList1">
+      <li>Coffee</li>
+      <li>Tea</li>
+    </ul>
+    <ul id="myList2">
+      <li>Water</li>
+      <li>Milk</li>
+      <li>Juice</li>
+    </ul>
+    <p>Click the button to move items from one list to another:</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <ul id="shoppingList">
+      <!-- New list to add items -->
+    </ul>
+    <input type="text" id="itemInput" />
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+      const list1 = document.getElementById("myList1");
+      const itemInput = document.getElementById("itemInput");
+      const addButton = document.querySelector("button");
+
+      function addItem() {
+        const inputValue = itemInput.value;
+        itemInput.value = "";
+
+        const newItem = document.createElement("li");
+        const span = document.createElement("span");
+        const deleteButton = document.createElement("button");
+
+        span.textContent = inputValue;
+        deleteButton.textContent = "Delete";
+
+        newItem.appendChild(span);
+        newItem.appendChild(deleteButton);
+
+        deleteButton.addEventListener("click", function () {
+          newItem.remove();
+          itemInput.focus();
+        });
+
+        const shoppingList = document.getElementById("shoppingList");
+        shoppingList.appendChild(newItem);
+
+        itemInput.focus();
+      }
+    </script>
+  </body>
+</html>
